@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(day, arr){
+                let answer = 0;
+                // 배열의 요소를 사용해야하면 for of를 사용하기
+                // 숫자에서 1의 자리수를 구하고 싶다면 10으로 나눈 나머지를 구하기 x%10 -> x의 1의 자리 숫자
+
+                arr.forEach((e) => {
+                    if (Number(String(e).at(1)) - day === 0) {
+                        answer++;
+                    }
+                })
+                
+                return answer;
+            }
+            
+            arr=[12, 20, 54, 30, 87, 91, 30];
+            console.log(solution(0, arr));
+        </script>
+    </body>
+</html>

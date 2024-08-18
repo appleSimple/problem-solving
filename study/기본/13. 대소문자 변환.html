@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                const arr = s.split('');
+                const lower = /^[a-z]+$/g;
+                const upper = /^[A-Z]+$/g;
+                
+                for (i=0; i<arr.length; i++) {
+                    if (lower.test(arr[i])) {
+                        arr[i] = arr[i].toUpperCase();
+                    } else {
+                        arr[i] = arr[i].toLowerCase();
+                    }
+                }
+
+                return arr.join('');
+            }
+
+            console.log(solution("StuDY"));
+        </script>
+    </body>
+</html>
